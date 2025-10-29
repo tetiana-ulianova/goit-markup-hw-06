@@ -353,7 +353,7 @@ address {
   }
 }
 
-@media (min-resolution: 192dpi) and (min-width: 768px) {
+@media (min-width: 768px) and (min-resolution: 192dpi) {
   .cta-section {
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
@@ -366,8 +366,8 @@ address {
 @media only screen and (min-width: 1158px) {
   .cta-section {
     padding: 188px 0;
-    max-width: 1440px;
-    height: 600px;
+    width: 100%;
+    min-height: 600px;
     margin: 0 auto;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     background-image: linear-gradient(
@@ -377,7 +377,7 @@ address {
       url("/images/bg_desk.jpg");
   }
 }
-@media (min-resolution: 192dpi) and (min-width: 1158px) {
+@media (min-width: 1158px) and (min-resolution: 192dpi) {
   .cta-section {
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
