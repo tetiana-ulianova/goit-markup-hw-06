@@ -325,7 +325,7 @@ address {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url("/images/bg_mob.jpg");
+    url("./images/bg_mob.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -339,7 +339,7 @@ address {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url("/images/bg_mob@2x.jpg");
+      url("./images/bg_mob@2x.jpg");
   }
 }
 
@@ -349,7 +349,7 @@ address {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url("/images/bg_tab.jpg");
+      url("./images/bg_tab.jpg");
   }
 }
 
@@ -359,7 +359,7 @@ address {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url("/images/bg_tab@2x.jpg");
+      url("./images/bg_tab@2x.jpg");
   }
 }
 
@@ -374,7 +374,7 @@ address {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url("/images/bg_desk.jpg");
+      url("./images/bg_desk.jpg");
   }
 }
 @media (min-width: 1158px) and (min-resolution: 192dpi) {
@@ -383,7 +383,7 @@ address {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url("/images/bg_desk@2x.jpg");
+      url("./images/bg_desk@2x.jpg");
   }
 }
 
