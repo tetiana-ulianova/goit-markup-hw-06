@@ -357,7 +357,7 @@ address {
       url("/images/bg_desk.jpg");
   }
 
-  @media (min-resolution: 2dppx) {
+  @media (min-resolution: 192dpi) {
     .cta-section {
       background-image: linear-gradient(
           rgba(46, 47, 66, 0.7),
@@ -376,7 +376,7 @@ address {
       ),
       url("/images/bg_tab.jpg");
   }
-  @media (min-resolution: 2dppx) {
+  @media (min-resolution: 192dpi) {
     .cta-section {
       background-image: linear-gradient(
           rgba(46, 47, 66, 0.7),
