@@ -16,8 +16,7 @@
     />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
-  <body class="">
-    <!-- menu-open -для мобменю, modal-open - для модалки у десктопі -->
+  <body>
     <!--Header section-->
 
     <header class="page-header">
@@ -27,15 +26,6 @@
           <a class="logo header-logo" href="./index.html"
             >Web<span class="header-logo-studio">Studio</span></a
           >
-          <button
-            class="mobile-menu-burger"
-            type="button"
-            aria-label="Open menu button"
-          >
-            <svg class="burger-menu-icon" width="24" height="24">
-              <use href="./images/icons.svg#burger-menu"></use>
-            </svg>
-          </button>
           <!-- Меню навігації -->
           <ul class="nav-list">
             <li class="nav-item">
@@ -53,13 +43,22 @@
                 >info@devstudio.com</a
               >
             </li>
-            <li class="contacts-item">
+            <li>
               <a class="contacts-link" href="tel:+110001111111"
                 >+11 (000) 111-11-11</a
               >
             </li>
           </ul>
         </address>
+        <button
+          class="mobile-menu-burger"
+          type="button"
+          aria-label="Open menu button"
+        >
+          <svg class="burger-menu-icon" width="24" height="24">
+            <use href="./images/icons.svg#burger-menu"></use>
+          </svg>
+        </button>
       </div>
     </header>
     <main>
@@ -138,13 +137,8 @@
             <li class="member-card">
               <img
                 class="team-image"
-                srcset="
-                  ./images/team/img-3.jpg    1x,
-                  ./images/team/img@2x-3.jpg 2x
-                "
                 src="./images/team/img-3.jpg"
                 alt="Mark Guerrero Photo"
-                loading="lazy"
               />
               <div class="team-card-text">
                 <h3 class="team-member-name">Mark Guerrero</h3>
@@ -204,15 +198,7 @@
             </li>
 
             <li class="member-card">
-              <img
-                srcset="
-                  ./images/team/img-2.jpg    1x,
-                  ./images/team/img@2x-2.jpg 2x
-                "
-                src="./images/team/img-2.jpg"
-                alt="Tom Ford Photo"
-                loading="lazy"
-              />
+              <img src="./images/team/img-2.jpg" alt="Tom Ford Photo" />
               <div class="team-card-text">
                 <h3 class="team-member-name">Tom Ford</h3>
                 <p class="team-member-position">Frontend Developer</p>
@@ -271,15 +257,7 @@
               </div>
             </li>
             <li class="member-card">
-              <img
-                srcset="
-                  ./images/team/img-1.jpg    1x,
-                  ./images/team/img@2x-1.jpg 2x
-                "
-                src="./images/team/img-1.jpg"
-                alt="Camila Garcia Photo"
-                loading="lazy"
-              />
+              <img src="./images/team/img-1.jpg" alt="Camila Garcia Photo" />
               <div class="team-card-text">
                 <h3 class="team-member-name">Camila Garcia</h3>
                 <p class="team-member-position">Marketing</p>
@@ -338,12 +316,7 @@
               </div>
             </li>
             <li class="member-card">
-              <img
-                srcset="./images/team/img.jpg 1x, ./images/team/img@2x.jpg 2x"
-                src="./images/team/img.jpg"
-                alt="Daniel Wilson Photo"
-                loading="lazy"
-              />
+              <img src="./images/team/img.jpg" alt="Daniel Wilson Photo" />
               <div class="team-card-text">
                 <h3 class="team-member-name">Daniel Wilson</h3>
                 <p class="team-member-position">UI Designer</p>
@@ -408,7 +381,7 @@
       <!-- Інформація про портфоліо -->
 
       <section class="portfolio">
-        <div class="portfolio-container">
+        <div class="container portfolio-container">
           <h2 class="portfolio-title">Our Portfolio</h2>
           <ul class="card-grid">
             <li class="portfolio-card">
@@ -416,7 +389,7 @@
                 <img
                   class="portfolio-image"
                   srcset="
-                    ./images/portfolio/bank_mob.jpg    1x,
+                    ./images/portfolio/bank_mob.jpg,
                     ./images/portfolio/bank_mob@2x.jpg 2x
                   "
                   src="./images/portfolio/bank_mob.jpg"
@@ -512,7 +485,7 @@
                     ./images/portfolio/ill_mob@2x.jpg 2x
                   "
                   src="./images/portfolio/ill_mob.jpg"
-                  alt="picture of screen wallpsper"
+                  alt="picture of screen wallpaper"
                   loading="lazy"
                 />
                 <p class="overlay">
@@ -553,10 +526,11 @@
         </div>
       </section>
     </main>
+
     <!-- Футер -->
     <footer class="footer-section">
-      <div class="footer-container">
-        <div class="container footer-logo-quote">
+      <div class="container footer-container">
+        <div class="footer-logo-box">
           <a class="footer-logo" href="./index.html">
             Web<span class="logo-part">Studio</span>
           </a>
@@ -565,7 +539,7 @@
             digital marketing & growth solutions.
           </p>
         </div>
-
+        <!-- </div> -->
         <div class="socials-box">
           <p class="socials-text">Social media</p>
           <!-- <div class="team-social"> -->
@@ -662,6 +636,9 @@
                 type="text"
                 name="user-name"
                 id="user-name"
+                required
+                pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
+                title="must include two words with a space between them"
               />
               <svg class="modal-form-icon" width="18" height="24">
                 <use href="./images/icons.svg#icon-person"></use>
@@ -692,6 +669,7 @@
                 type="email"
                 name="user-email"
                 id="user-email"
+                required
               />
               <svg class="modal-form-icon" width="18" height="24">
                 <use href="./images/icons.svg#icon-email"></use>
@@ -706,6 +684,9 @@
               id="user-comment"
               placeholder="Text input"
               rows="4"
+              required
+              minlength="10"
+              maxlength="1000"
             ></textarea>
           </div>
           <div class="form-agreement">
@@ -732,37 +713,40 @@
     </div>
 
     <!-- Mobile menu -->
-
-    <div class="mobile-menu hide">
-      <div class="container">
+    <div class="mobile-menu">
+      <div class="container mobile-menu-container">
         <button class="mobile-menu-btn">
           <svg class="mobile-menu-btn-icon" width="8" height="8">
             <use href="/images/icons.svg#icon-close"></use>
           </svg>
         </button>
-        <ul class="mobile-menu-nav">
-          <li class="mobile-menu-item">
-            <a class="mobile-menu-link" href="#">Studio</a>
-          </li>
-          <li class="mobile-menu-item">
-            <a class="mobile-menu-link" href="#">Portfolio</a>
-          </li>
-          <li class="mobile-menu-item">
-            <a class="mobile-menu-link" href="#">Contacts</a>
-          </li>
-        </ul>
-        <ul class="mobile-menu-contacts">
-          <li class="mobile-menu-item">
-            <a class="mobile-menu-link" href="tel:110001111111"
-              >+11 (000) 111-11-11</a
-            >
-          </li>
-          <li class="mobile-menu-item">
-            <a class="mobile-menu-link" href="mailto:info@devstudio.com"
-              >info@devstudio.com</a
-            >
-          </li>
-        </ul>
+        <nav class="mobile-menu-nav">
+          <ul class="mobile-menu-nav-list">
+            <li class="mobile-menu-item">
+              <a class="mobile-menu-link" href="#">Studio</a>
+            </li>
+            <li class="mobile-menu-item">
+              <a class="mobile-menu-link" href="#">Portfolio</a>
+            </li>
+            <li class="mobile-menu-item">
+              <a class="mobile-menu-link" href="#">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+        <address class="mobile-address">
+          <ul class="mobile-menu-contacts">
+            <li class="mobile-menu-item">
+              <a class="mobile-menu-link" href="tel:110001111111"
+                >+11 (000) 111-11-11</a
+              >
+            </li>
+            <li class="mobile-menu-item">
+              <a class="mobile-menu-link" href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+        </address>
         <ul class="mobile-menu-social-list">
           <li class="footer-social-item">
             <a
@@ -815,157 +799,5 @@
         </ul>
       </div>
     </div>
-
-    <!-- Different size and crop PORTFOLIO-->
-
-    <picture>
-      <!-- Desktop -->
-      <source
-        media="(min-width: 1158px)"
-        srcset="
-          ./images/portfolio/bank_desk.jpg    1x,
-          ./images/portfolio/bank_desk@2x.jpg 2x
-        "
-      />
-      <!-- Tablet -->
-      <source
-        media="(min-width: 767px)"
-        srcset="
-          ./images/portfolio/bank_tab.jpg 1x,
-          ./images/portfolio/bank_tab@2x  2x
-        "
-      />
-      <!-- Mobile fallback -->
-      <img
-        src="./images/portfolio/bank_mob.jpg"
-        alt="Макет додатку банкінгу для мобільних пристроїв"
-        loading="lazy"
-      />
-    </picture>
-
-    <picture>
-      <!-- Desktop -->
-      <source
-        media="(min-width: 1158px)"
-        srcset="
-          ./images/portfolio/cash_desk.jpg    1x,
-          ./images/portfolio/cash_desk@2x.jpg 2x
-        "
-      />
-      <!-- Tablet -->
-      <source
-        media="(min-width: 767px)"
-        srcset="
-          ./images/portfolio/cash_tab.jpg 1x,
-          ./images/portfolio/cash_tab@2x  2x
-        "
-      />
-      <!-- Mobile fallback -->
-      <img
-        src="./images/portfolio/cash_mob.jpg"
-        alt="Макет cashless payment для мобільних пристроїв"
-        loading="lazy"
-      />
-    </picture>
-
-    <picture>
-      <!-- Desktop -->
-      <source
-        media="(min-width: 1158px)"
-        srcset="
-          ./images/portfolio/course_desk.jpg    1x,
-          ./images/portfolio/course_desk@2x.jpg 2x
-        "
-      />
-      <!-- Tablet -->
-      <source
-        media="(min-width: 767px)"
-        srcset="
-          ./images/portfolio/course_tab.jpg 1x,
-          ./images/portfolio/course_tab@2x  2x
-        "
-      />
-      <!-- Mobile fallback -->
-      <img
-        src="./images/portfolio/course_mob.jpg"
-        alt="Макет онлайн курсу для мобільних пристроїв"
-        loading="lazy"
-      />
-    </picture>
-
-    <picture>
-      <!-- Desktop -->
-      <source
-        media="(min-width: 1158px)"
-        srcset="
-          ./images/portfolio/ill_desk.jpg    1x,
-          ./images/portfolio/ill_desk@2x.jpg 2x
-        "
-      />
-      <!-- Tablet -->
-      <source
-        media="(min-width: 767px)"
-        srcset="
-          ./images/portfolio/ill_tab.jpg 1x,
-          ./images/portfolio/ill_tab@2x  2x
-        "
-      />
-      <!-- Mobile fallback -->
-      <img
-        src="./images/portfolio/ill_mob.jpg"
-        alt="Макет заставок на екран для мобільних пристроїв"
-        loading="lazy"
-      />
-    </picture>
-
-    <picture>
-      <!-- Desktop -->
-      <source
-        media="(min-width: 1158px)"
-        srcset="
-          ./images/portfolio/meditation_desk.jpg    1x,
-          ./images/portfolio/meditation_desk@2x.jpg 2x
-        "
-      />
-      <!-- Tablet -->
-      <source
-        media="(min-width: 767px)"
-        srcset="
-          ./images/portfolio/meditation_tab.jpg 1x,
-          ./images/portfolio/meditation_tab@2x  2x
-        "
-      />
-      <!-- Mobile fallback -->
-      <img
-        src="./images/portfolio/meditation_mob.jpg"
-        alt="Макет додатку медитацій для мобільних пристроїв"
-        loading="lazy"
-      />
-    </picture>
-
-    <picture>
-      <!-- Desktop -->
-      <source
-        media="(min-width: 1158px)"
-        srcset="
-          ./images/portfolio/taxi_desk.jpg    1x,
-          ./images/portfolio/taxi_desk@2x.jpg 2x
-        "
-      />
-      <!-- Tablet -->
-      <source
-        media="(min-width: 767px)"
-        srcset="
-          ./images/portfolio/taxi_tab.jpg 1x,
-          ./images/portfolio/taxi_tab@2x  2x
-        "
-      />
-      <!-- Mobile fallback -->
-      <img
-        src="./images/portfolio/taxi_mob.jpg"
-        alt="Макет додатку таксі для мобільних пристроїв"
-        loading="lazy"
-      />
-    </picture>
   </body>
 </html>
