@@ -334,11 +334,13 @@ address {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: transparent;
 }
 
 .mobile-menu-btn-icon {
   max-width: 100%;
   box-sizing: border-box;
+  stroke: #2e2f42;
   fill: #2e2f42;
 }
 
